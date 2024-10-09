@@ -1,0 +1,227 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Color de fondo general */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color del texto */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo de la contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos del chat */
+.chat-container {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del contenedor del chat */
+    margin: 20px auto; /* Centrar el contenedor del chat */
+    background-color: #1f1f1f; /* Color de fondo del chat */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    padding: 20px; /* Espaciado interno */
+    display: flex;
+    flex-direction: column; /* Colocar los elementos en columnas */
+    height: 500px; /* Altura del chat */
+    position: relative;
+    overflow: hidden; /* Evitar desbordamiento */
+}
+
+/* Salida del chat */
+#chat-output {
+    flex-grow: 1; /* Permitir que crezca el área de salida */
+    overflow-y: auto; /* Desplazamiento vertical si hay mucho texto */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    background-color: #1f1f1f; /* Color de fondo del área de salida */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Margen inferior */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Estilos de los mensajes */
+#chat-output p {
+    margin: 0 0 10px; /* Margen inferior */
+    position: relative;
+    max-width: 80%; /* Ancho máximo del mensaje */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Mensajes del usuario */
+#chat-output p.user-message {
+    background-color: #007bff; /* Color de fondo del mensaje del usuario */
+    color: white; /* Color del texto del mensaje del usuario */
+    margin-left: auto; /* Alinear a la derecha */
+    border-top-right-radius: 0; /* Bordes redondeados */
+}
+
+/* Mensajes del chatbot */
+#chat-output p.chatbot-message {
+    background-color: #5a4d4d; /* Color de fondo del mensaje del chatbot */
+    color: white; /* Color del texto del mensaje del chatbot */
+    margin-right: auto; /* Alinear a la izquierda */
+    border-top-left-radius: 0; /* Bordes redondeados */
+}
+
+/* Input y botón para enviar mensajes */
+.input-container {
+    display: flex; /* Flexbox para el input y botón */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinear verticalmente */
+    margin-top: 10px; /* Margen superior */
+}
+
+#user-input {
+    width: 80%; /* Ancho del input */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Color del borde del input */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: border-color 0.3s; /* Transición suave del borde */
+}
+
+#user-input:focus {
+    border-color: #007bff; /* Color del borde al enfocar */
+}
+
+#send-button {
+    width: 18%; /* Ancho del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    margin-left: 10px; /* Margen izquierdo */
+    transition: background-color 0.3s; /* Transición suave del fondo */
+}
+
+#send-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 90%; /* Ancho del contenedor del chat en dispositivos pequeños */
+    }
+
+    #user-input {
+        width: 70%; /* Ancho del input en dispositivos pequeños */
+    }
+
+    #send-button {
+        width: 25%; /* Ancho del botón en dispositivos pequeños */
+    }
+}
+
+/* Estilos de las secciones */
+h2 {
+    color: #333; /* Color del texto de los encabezados */
+}
+
+.card {
+    background-color: #fff; /* Color de fondo de las tarjetas */
+    padding: 20px; /* Espaciado interno de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+table {
+    width: 100%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno de celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea inferior */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo de los encabezados */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#chat-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#chat-output {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chatbot-message {
+    background-color: #f0f0f0; /* Color de fondo del mensaje del bot */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    margin: 5px 0; /* Espacio superior e inferior entre mensajes */
+    max-width: 80%; /* Ancho máximo del mensaje */
+    align-self: flex-start; /* Alineación a la izquierda */
+}
+
+.user-message {
+    background-color: #007bff; /* Color de fondo del mensaje del usuario */
+    color: white; /* Color del texto */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    margin: 5px 0; /* Espacio superior e inferior entre mensajes */
+    max-width: 80%; /* Ancho máximo del mensaje */
+    align-self: flex-end; /* Alineación a la derecha */
+}
+
+.chat-message {
+    display: flex; /* Usar flexbox para alinear la imagen y el mensaje */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 10px;
+}
+
+
+.bot-image {
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: 40px;
+    margin-right: 10px; /* Espacio entre la imagen y el mensaje */
+}
+.chatbot-title {
+    font-size: 2em; /* Aumenta el tamaño de la fuente */
+    color: #2C3E50; /* Color oscuro */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-weight: bold; /* Hacer el texto más grueso */
+}
+
+.chatbot-description {
+    font-size: 1.2em; /* Tamaño de fuente más grande para la descripción */
+    color: #34495E; /* Color gris oscuro */
+    text-align: center; /* Centrar el texto */
+    margin: 0 20px; /* Espacio a los lados */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.chatbot-call-to-action {
+    font-size: 1.2em; /* Tamaño de fuente para el llamado a la acción */
+    color: #E74C3C; /* Color rojo */
+    text-align: center; /* Centrar el texto */
+    font-weight: bold; /* Hacer el texto más grueso */
+    margin-top: 15px; /* Espacio arriba del llamado a la acción */
+}
+

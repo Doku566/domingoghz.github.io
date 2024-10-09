@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1 - Domingo González</title>
+    <link rel="stylesheet" href="../../../src/styles.css"> <!-- Ruta del estilo principal -->
+    <link rel="stylesheet" href="../../estilos/ia-styles.css"> <!-- Nuevo estilo dedicado a Hatsu IA -->
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="../../../src/images/Logo/Logo.png" alt="Logo" class="logo-image">
+                <span class="logo-text">Domingo González Hernández</span>
+            </div>
+            <div class="menu-hamburguesa" id="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#app">App</a></li>
+                <li><a href="#Funciones">Funciones</a></li>
+                <li><a href="#Proposito">Propósito</a></li>
+                <li><a href="../../../index.html">Página Principal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="Inicio" class="about">
+        <div class="about-content">
+            <img src="../../../src/images/Proyectos-IA/IA.png" alt="Logo Hatsu IA" class="hatsu-logo">
+            <h2>Hatsu IA</h2>
+            <p>Bienvenido a Hatsu IA, la asistente inteligente evolutiva. Estoy aquí para ayudarte con tus consultas y tareas. ¡Pregúntame cualquier cosa!</p>
+        </div>
+    </section>
+
+    <!-- Sección de la App -->
+    <section id="app">
+        <div class="ia-interface">
+            <div class="console">
+                <p class="output" id="output">Bienvenido a Hatsu IA, la asistente inteligente evolutiva</p>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Escribe tu mensaje aquí">
+                    <button onclick="enviarMensaje()">
+                        <img src="../../../src/images/Proyectos-IA/Enviar.png" alt="Enviar" class="send-icon">
+                    </button>
+                </div>
+                <div id="chat"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Funciones -->
+    <section id="Funciones">
+        <h3>Funciones de Hatsu IA</h3>
+        <div class="card">
+            <ul>
+                <li>Responder preguntas sobre diversos temas.</li>
+                <li>Proporcionar asistencia en tareas específicas.</li>
+                <li>Interactuar de manera conversacional y amigable.</li>
+                <li>Aprender de las interacciones para mejorar las respuestas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de Propósito -->
+    <section id="Proposito">
+        <h3>Propósito de Hatsu IA</h3>
+        <div class="card">
+            <p>El propósito de Hatsu IA es facilitar el acceso a la información y ofrecer asistencia personalizada a los usuarios. Buscamos hacer la tecnología más accesible y útil para todos, mejorando así la experiencia de interacción con la inteligencia artificial.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="about hero">
+        <div class="about-content">
+            <h2>Contáctame</h2>
+            <p>Si estás interesado en este tipo de proyectos, no dudes en ponerte en contacto conmigo:</p>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/domingo-gonz%C3%A1lez-hernandez-73127a213/"><img src="../../../src/images/Contactos/Linkedin.png" alt="LinkedIn"></a>
+                <a href="mailto:domingoghz245@gmail.com"><img src="../../../src/images/Contactos/Gmail.png" alt="Gmail"></a>
+                <a href="https://github.com/Doku566"><img src="../../../src/images/Contactos/Github.png" alt="GitHub"></a>
+                <!-- Añadir más iconos si es necesario -->
+                <div class="contact-container card">
+                    <input type="text" value="domingoghz245@gmail.com" readonly class="email-input">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Domingo Gonzalez Hernandez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="../../../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Estilo dedicado para la IA Hatsu */
+body {
+    background-color: #0d0d0d;
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0; /* Asegura que no haya padding en el body */
+}
+
+header {
+    background-color: #1b1b1b;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed; /* Mantiene el encabezado fijo */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+nav .logo-text {
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    display: flex; /* Usar flexbox para el menú */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.about-content {
+    text-align: center;
+    margin-top: 120px; /* Se ajusta para no superponerse con el header */
+    max-width: 800px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+.ia-interface {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto; /* Separa la sección de la App del resto */
+    max-width: 600px;
+    box-shadow: 0px 0px 15px rgba(255, 77, 77, 0.5);
+}
+
+.ia-interface h3 {
+    color: #66ff66;
+    font-size: 24px;
+}
+
+.console {
+    background-color: #141414;
+    border: 2px solid #66ff66;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+}
+
+.console .output {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #66ff66;
+    margin-bottom: 10px;
+}
+
+.console .input-container {
+    display: flex; /* Usar flexbox para alinear el input y el botón */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.console input {
+    flex-grow: 1; /* Permitir que el input ocupe el espacio disponible */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0d0d0d;
+    border: 1px solid #66ff66;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+.console button {
+    background-color: transparent; /* Hacer fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor al pasar */
+}
+
+.console button img {
+    width: 20px; /* Ajustar tamaño del ícono */
+    height: auto; /* Mantener proporciones */
+}
+
+footer {
+    background-color: #1b1b1b;
+    text-align: center;
+    padding: 1px 0;
+    color: #999;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.hatsu-logo {
+    max-width: 200px; /* Ajusta el tamaño máximo según lo desees */
+    margin-bottom: -50px; /* Espacio entre el logo y el título */
+}
+
+/* Nuevos estilos para separar las secciones */
+section {
+    padding: 40px 20px; /* Espacio alrededor de las secciones */
+    border-bottom: 1px solid #333; /* Línea divisoria entre secciones */
+    margin: 20px 0; /* Margen entre secciones */
+}
+
+/* Estilo para las tarjetas */
+.card {
+    background-color: #2a2a2a; /* Color de fondo de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    margin: 20px 0; /* Espacio entre tarjetas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra de la tarjeta */
+    transition: transform 0.3s ease; /* Transición para animación */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Escala la tarjeta al pasar el mouse */
+}
+
+/* Estilos adicionales para el texto dentro de la tarjeta */
+.card h3 {
+    color: #ff4d4d; /* Color del título en las tarjetas */
+    font-size: 24px; /* Tamaño de fuente del título */
+}
+
+.card p, .card ul {
+    color: #e0e0e0; /* Color del texto en las tarjetas */
+    font-size: 18px; /* Tamaño de fuente del texto */
+}
+
+/* Animaciones al cargar */
+.section-animate {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones para la animación */
+}
+
+.section-animate.visible {
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* En su posición original */
+}

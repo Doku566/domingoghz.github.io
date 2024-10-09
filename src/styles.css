@@ -1,0 +1,342 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado y navegación */
+header {
+    background-color: #1c1c27; /* Fondo del encabezado */
+    padding: 20px 30px;
+    position: relative; /* Asegura que los elementos absolutos se posicionen correctamente */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Alinea el contenido a la derecha */
+    align-items: center;
+    
+}
+
+/* Menú principal */
+.menu {
+    display: none; /* Ocultamos el menú por defecto */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* Posiciona el menú debajo del menú hamburguesa */
+    right: 0;
+    background-color: #333;
+    width: 200px; /* Ajusta el ancho del menú desplegable */
+    flex-direction: column; /* Muestra el menú en una columna */
+    border-radius: 5px; /* Redondea las esquinas del menú desplegable */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra para el menú desplegable */
+}
+
+.menu.show {
+    display: flex; /* Muestra el menú cuando se activa */
+}
+
+.menu li {
+    margin: 0;
+    text-align: center;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #15045f; /* Color de fondo al pasar el ratón por encima */
+    border-radius: 5px; /* Redondea las esquinas del enlace del menú */
+}
+
+/* Menú Hamburguesa */
+.menu-hamburguesa {
+    display: flex; /* Mostrar siempre el menú hamburguesa */
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Posiciona el menú hamburguesa a la derecha */
+    top: 10px; /* Asegura que esté alineado verticalmente en la parte superior */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.menu-hamburguesa span {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    height: 4px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+    .menu-hamburguesa {
+        display: none; /* Ocultar el menú hamburguesa en pantallas grandes */
+    }
+    .menu {
+        display: flex; /* Muestra el menú en su formato normal en pantallas grandes */
+        position: static; /* Elimina la posición absoluta para pantallas grandes */
+        width: auto; /* Ajusta el ancho del menú para que se ajuste al contenido */
+        flex-direction: row; /* Muestra el menú horizontalmente */
+        background-color: transparent; /* Fondo transparente para el menú en pantallas grandes */
+        box-shadow: none; /* Elimina la sombra para el menú en pantallas grandes */
+    }
+    .menu a {
+        padding: 10px 15px;
+    }
+}
+
+
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.hero img.avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.hero h1 {
+    margin: 1px 0 1px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* About */
+.about {
+    padding: 50px 20px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text {
+    margin-top: 20px;
+}
+
+.contact-icons {
+    margin-top: 20px;
+}
+
+.contact-icons img {
+    width: 40px;
+    margin: 0 20px;
+}
+
+/* Slider */
+.slider-container {
+    position: relative;
+    max-width: 40%; /* Ajusta el ancho del slider aquí */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px; /* Radio de las esquinas del slider */
+    background-color: #000; /* Fondo negro para el contenedor del slider */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 400px; /* Ajusta según el tamaño deseado del slider */
+    background-size: contain; /* Ajusta el tamaño de la imagen */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    border-radius: 15px; /* Radio de las esquinas de las imágenes */
+}
+
+/* Controles del slider */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Opcional: redondear las esquinas de los controles */
+}
+
+
+
+
+
+/* Projects */
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #222;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 15px 0 10px;
+}
+
+.project-card p {
+    margin: 0 0 10px;
+}
+
+.project-card a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+/* Skills */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skills-category {
+    background: #141222; /* Gris para los contenedores */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    text-align: center;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    margin: 10px;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill p {
+    margin: 5px 0 0;
+}
+
+/* Contacto */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.hero img.avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.hero h1 {
+    margin: 1px 0 1px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #080536;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+    position:relative;
+    bottom: -80px;
+    width: 100%;
+    margin: auto;
+}
+/* Contenedor del logo y texto */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding: 0 20px;
+}
+
+/* Tamaño del Logo */
+.logo-image {
+    width: 50px; /* Tamaño ajustado del logo */
+    height: auto;
+    margin-right: 10px; /* Espacio entre logo y texto */
+}
+
+/* Estilo del texto del nombre */
+.logo-text {
+    font-size: 18px;
+    color: #ffffff; /* Ajusta el color del texto si es necesario */
+    font-weight: bold;
+}
+
+.email-input {
+    border: none; /* Sin borde */
+    background-color: transparent; /* Fondo transparente */
+    cursor: text; /* Cambiar el cursor al pasar sobre el campo */
+    width: auto; /* Ajustar el ancho según sea necesario */
+    font-size: 15px; /* Tamaño de fuente */
+    color: #ad1818; /* Color del texto */
+    margin-top: 10px; /* Espaciado superior */
+    pointer-events: none; /* Deshabilitar la interactividad */
+}
