@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Creación de la imagen del bot
         const botImage = document.createElement('img');
-        botImage.src = '../../../../src/images/Logo/Chatbot.png'; // Ruta a la imagen del bot
+        botImage.src = '../../../src/images/Logo/Chatbot.png'; // Ruta a la imagen del bot
         botImage.alt = 'Chatbot';
         botImage.className = 'bot-image'; // Clases CSS para ajustar el tamaño
     
